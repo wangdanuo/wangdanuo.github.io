@@ -40,4 +40,16 @@
         <tag>git</tag>
       </tags>
   </entry>
+  <entry>
+    <title>闭包并不会造成内存泄漏</title>
+    <url>/2020/02/21/%E9%97%AD%E5%8C%85%E5%B9%B6%E4%B8%8D%E4%BC%9A%E9%80%A0%E6%88%90%E5%86%85%E5%AD%98%E6%B3%84%E6%BC%8F/</url>
+    <content><![CDATA[<p>问题：闭包会造成内存泄露?<br>错，这是一个流传多年的谣言。因为IE6时代有bug，IE在我们使用完闭包之后，依然回收不了闭包里面引用的变量。这是IE的问题，不是闭包的问题，而且IE后来已经修复了这个bug。<br>内存泄露是指你用不到（访问不到）的变量，依然占居着内存空间，不能被再次利用起来。闭包里面的变量就是我们需要的变量，说成“内存泄漏”并不恰当。<br>由于闭包会使得函数中的变量都被保存在内存中，内存消耗很大，所以不能滥用闭包，否则会造成网页的性能问题。</p>
+]]></content>
+      <categories>
+        <category>JavaScript</category>
+      </categories>
+      <tags>
+        <tag>JavaScript</tag>
+      </tags>
+  </entry>
 </search>
