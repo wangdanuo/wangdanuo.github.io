@@ -76,7 +76,7 @@
     <url>/2020/02/21/hexo%E7%9A%84%E6%96%87%E7%AB%A0%E5%A6%82%E4%BD%95%E5%88%A0%E9%99%A4%E5%B9%B2%E5%87%80/</url>
     <content><![CDATA[<p>1.到目录/source/_posts下删除相应的文章<br>2.$ hexo g<br>3.$ hexo d<br>注意：如果是用其他编辑器（如VScode）打开的，要将对应的文章也一并删除。</p>
 <a id="more"></a>
-<p><strong>补充：hexo常用指令</strong><br>  hexo n [layout] <title>  #新建文章<br>    layout 可选参数，用以指定文章类型，若无指定则默认由配置文件中的 default_layout 选项决定<br>    title 必填参数，用以指定文章标题，如果参数值中含有空格，则需要使用双引号包围<br>  hexo clean  #清理缓存文件<br>  hexo g  #生成文件<br>  hexo s  #运行本地服务器<br>  hexo d  #部署到远程服务器</p>
+<p><strong>补充：hexo常用指令</strong><br>  hexo n [layout] &lt;title&gt;  #新建文章<br>    layout 可选参数，用以指定文章类型，若无指定则默认由配置文件中的 default_layout 选项决定<br>    title 必填参数，用以指定文章标题，如果参数值中含有空格，则需要使用双引号包围<br>  hexo clean  #清理缓存文件<br>  hexo g  #生成文件<br>  hexo s  #运行本地服务器<br>  hexo d  #部署到远程服务器</p>
 ]]></content>
       <categories>
         <category>建站</category>
