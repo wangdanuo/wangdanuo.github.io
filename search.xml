@@ -1,6 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>CSS3实现卡片翻转</title>
+    <url>/2020/04/08/CSS3%E5%AE%9E%E7%8E%B0%E5%8D%A1%E7%89%87%E7%BF%BB%E8%BD%AC/</url>
+    <content><![CDATA[<p>实现原理：背面的内容一开始就先翻转180度（设置元素背面不可见）,等正面翻转的时候背面再翻转360度,这样背面翻转到面对屏幕的时候内容是正的而不是反的。<br>具体代码如下：</p>
+<a id="more"></a>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html lang&#x3D;&quot;en&quot;&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">    &lt;meta charset&#x3D;&quot;UTF-8&quot;&gt;</span><br><span class="line">    &lt;meta name&#x3D;&quot;viewport&quot; content&#x3D;&quot;width&#x3D;device-width, initial-scale&#x3D;1.0&quot;&gt;</span><br><span class="line">    &lt;title&gt;Document&lt;&#x2F;title&gt;</span><br><span class="line">    &lt;style&gt;</span><br><span class="line">        #box&#123;</span><br><span class="line">            width:200px;</span><br><span class="line">            height:200px;</span><br><span class="line">            position:relative;</span><br><span class="line">        &#125;</span><br><span class="line">        #box div&#123;</span><br><span class="line">            position:absolute;</span><br><span class="line">            top:0;</span><br><span class="line">            left:0;</span><br><span class="line">            width:100%;</span><br><span class="line">            height:100%;</span><br><span class="line">            backface-visibility:hidden;</span><br><span class="line">            transition: all 2s;</span><br><span class="line">        &#125;</span><br><span class="line">        #box .front&#123;</span><br><span class="line">            background:#f00;</span><br><span class="line">        &#125;</span><br><span class="line">        #box .back&#123;</span><br><span class="line">            background:#00f;</span><br><span class="line">            transform:rotateY(-180deg);</span><br><span class="line">        &#125;</span><br><span class="line">        #box:hover .front&#123;</span><br><span class="line">            transform:rotateY(-180deg);</span><br><span class="line">        &#125;</span><br><span class="line">        #box:hover .back&#123;</span><br><span class="line">            transform:rotateY(-360deg);</span><br><span class="line">        &#125;</span><br><span class="line">    &lt;&#x2F;style&gt;</span><br><span class="line">&lt;&#x2F;head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">    &lt;div id&#x3D;&quot;box&quot;&gt;</span><br><span class="line">        &lt;div class&#x3D;&quot;front&quot;&gt;正面&lt;&#x2F;div&gt;</span><br><span class="line">        &lt;div class&#x3D;&quot;back&quot;&gt;反面&lt;&#x2F;div&gt;</span><br><span class="line">    &lt;&#x2F;div&gt;</span><br><span class="line">&lt;&#x2F;body&gt;</span><br><span class="line">&lt;&#x2F;html&gt;</span><br></pre></td></tr></table></figure>
+<p>相关属性说明：<br>①backface-visibility:visiale|hidden<br>该属性用来定义当元素不面向屏幕的时候是否可见,可用来设置旋转元素是否希望用来看到背面。<br>②transition:过渡属性名称|过渡动画持续时间|过渡动画类型|延迟过渡时间<br>其中过渡动画持续时间必须设置，否则不会产生过渡效果。<br>③transform:rotateY(Ndeg)<br>定义沿着X轴的3D旋转，参数为旋转角度。</p>
+]]></content>
+      <categories>
+        <category>CSS</category>
+      </categories>
+      <tags>
+        <tag>css</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>用React实现交替变换的红绿灯</title>
     <url>/2020/04/03/%E7%94%A8React%E5%AE%9E%E7%8E%B0%E4%BA%A4%E6%9B%BF%E5%8F%98%E6%8D%A2%E7%9A%84%E7%BA%A2%E7%BB%BF%E7%81%AF/</url>
     <content><![CDATA[<p>最终效果如图：<br><img src="https://github.com/wangdanuo/images/raw/master/image04.png" alt="image"></p>
