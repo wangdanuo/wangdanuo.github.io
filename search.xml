@@ -1,6 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>CSS实现两个div重合部分高亮显示</title>
+    <url>/2020/04/21/CSS%E5%AE%9E%E7%8E%B0%E4%B8%A4%E4%B8%AAdiv%E9%87%8D%E5%90%88%E9%83%A8%E5%88%86%E9%AB%98%E4%BA%AE%E6%98%BE%E7%A4%BA/</url>
+    <content><![CDATA[<p>实现原理：橙色和紫色部分大小、位置相同，通过给父元素设置overflow: hidden将紫色多余部分隐藏，橙色部分是脱离文档流的，不受overflow: hidden影响。橙色部分设置z-index: -1，使紫色部分显示在最上层。<br>具体代码如下：</p>
+<a id="more"></a>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html lang&#x3D;&quot;en&quot;&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">    &lt;meta charset&#x3D;&quot;UTF-8&quot;&gt;</span><br><span class="line">    &lt;meta name&#x3D;&quot;viewport&quot; content&#x3D;&quot;width&#x3D;device-width, initial-scale&#x3D;1.0&quot;&gt;</span><br><span class="line">    &lt;title&gt;Document&lt;&#x2F;title&gt;</span><br><span class="line">    &lt;style&gt;</span><br><span class="line">        #div1&#123;</span><br><span class="line">            width: 300px;</span><br><span class="line">            height: 300px;</span><br><span class="line">            background: pink;</span><br><span class="line">            overflow: hidden;</span><br><span class="line">        &#125;</span><br><span class="line">        .d1&#123;</span><br><span class="line">            background: orange;</span><br><span class="line">            width: 300px;</span><br><span class="line">            height: 300px;</span><br><span class="line">            position: absolute;</span><br><span class="line">            margin: 200px 0 0 30px;</span><br><span class="line">            z-index: -1;</span><br><span class="line">        &#125;</span><br><span class="line">        .d2&#123;</span><br><span class="line">            width: 300px;</span><br><span class="line">            height: 300px;</span><br><span class="line">            background: orchid;</span><br><span class="line">            margin: 200px 0 0 30px;</span><br><span class="line">        &#125;</span><br><span class="line">    &lt;&#x2F;style&gt;</span><br><span class="line">&lt;&#x2F;head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">    &lt;div id&#x3D;&quot;div1&quot;&gt;</span><br><span class="line">        &lt;div class&#x3D;&quot;d1&quot;&gt;&lt;&#x2F;div&gt;</span><br><span class="line">        &lt;div class&#x3D;&quot;d2&quot;&gt;&lt;&#x2F;div&gt;</span><br><span class="line">    &lt;&#x2F;div&gt;</span><br><span class="line">&lt;&#x2F;body&gt;</span><br><span class="line">&lt;&#x2F;html&gt;</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>CSS</category>
+      </categories>
+      <tags>
+        <tag>css</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>CSS3实现卡片翻转</title>
     <url>/2020/04/08/CSS3%E5%AE%9E%E7%8E%B0%E5%8D%A1%E7%89%87%E7%BF%BB%E8%BD%AC/</url>
     <content><![CDATA[<p>实现原理：背面的内容一开始就先翻转180度（设置元素背面不可见）,等正面翻转的时候背面再翻转180度,这样背面翻转到面对屏幕的时候内容是正的而不是反的。<br>具体代码如下：</p>
